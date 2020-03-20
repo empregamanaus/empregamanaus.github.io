@@ -76,6 +76,34 @@ nav .start-vagas, a:nth-child(6):hover~.animation {
 	left: 600px;
 	background-color: #f1828d;
 }
+input[type=submit] {
+  width: 100%;
+  background-color: #23cba7;
+  color: black;
+    font-size: bold;
+  padding: 14px 20px;
+  margin: 30px 0 30px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #049372;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-size: 18px;
+}
 
 body {
 	font-size: 12px;
@@ -92,7 +120,16 @@ h1 {
 	font-family: 'Cherry Swash', cursive;
 }
 
-p {
+h3{
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Cherry Swash', cursive;
+}
+
+p :not(#content,.step-next){
     position: absolute;
     bottom: 20px;
     width: 100%;
@@ -102,6 +139,11 @@ p {
     font-size: 16px;
 }
 
+select {
+   cursor: pointer;
+}
+
 span {
     color: #2BD6B4;
 }
+
