@@ -12,21 +12,49 @@
       <p>Preencha corretamente suas Informações</p>
       
       <form action="#">
-        <label for="fname">Primeiro Nome</label>
-        <input type="text" id="fname" name="firstname" placeholder="Seu nome..">
+        <label for="fname">Nome Completo:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Nome completo...">
 
-        <label for="lname">Sobrenome</label>
-        <input type="text" id="lname" name="lastname" placeholder="Seu Ultimo nome..">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" placeholder="Seu E-mail...">
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" placeholder="Telefone ou celular...">
 
-        <label for="country">Bairro</label>
+        <label for="country">Bairro:</label>
         <select id="country" name="country">
           <option value="Coroado">Coroado</option>
           <option value="Alvorada">Alvorada</option>
           <option value="viverMelhor">Viver Melhor</option>
           <option value="efigenioSales">Efigenio Sales</option>
+          <option value="condJP">Joao Paulo</option>
+          <option value="jorgeTeixeira">Jorge Teixeira</option>
+          <option value="novaCidade">Nova Cidade</option>
         </select>
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo" placeholder="Sua profissão...">
+        <label for="atuacao">Área de Atuação:</label>
+          <select id="atuacao" name="atuacao">
+            <option value="Administração">Administração</option>
+            <option value="artes_e_Design">Artes e Design</option>
+            <option value="cienciaSociais_e_Humanaus">Ciências Sociais e Humanas</option>
+            <option value="comunicacao_Informatica">Comunicação e Informática</option>
+            <option value="engenharias">Engenharias</option>
+            <option value="meio_Ambiente">Meio Ambiente</option>
+            <option value="saude_Bem-estar">Saúde e Bem-estar</option>
+            <option value="comunicacao_Informatica">Cominicação e Informática</option>
+            <option value="comunicacao_Informatica">Cominicação e Informática</option>
+            <option value="consultoria">Consultoria</option>
+            <option value="recursosHumanos">Recursos Humanos</option>
+          </select>
+
+           <label for="myFile" id="logoUploadLabel">Anexar Currículo:</label>
+           <input type="file" id="myFile" name="lcurriculo">  
       
         <input type="submit" value="Enviar">
+        <div class="btnCancelar">
+          <a href="#">Cancelar</a>
+        </div>
+        
       </form>
     </div>
 
