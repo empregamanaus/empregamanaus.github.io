@@ -3,7 +3,7 @@
 }
 
 nav {
-	margin: 27px auto 0;
+	margin: 27px auto 200px;
 	/*margin:auto;*/
 	
 	position: relative;
@@ -137,8 +137,7 @@ h3{
 }
 
 p {
-    position: absolute;
-    bottom: 20px;
+    
     width: 100%;
     text-align: center;
     color: #ecf0f1;
@@ -190,6 +189,7 @@ nav .dropdown:hover .dropdown-content {
 /* carousel */
 
 .slideshow-container {
+    
   max-width: 1000px;
   position: relative;
   margin: auto;
