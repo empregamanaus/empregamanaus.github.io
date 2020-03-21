@@ -1,83 +1,11 @@
-
-
-
-
-
-button{
-    width: 100%;
-  background-color: rosybrown;
-  color: black;
-    font-size: bold;
-  padding: 14px 20px;
-  margin: 30px 0 30px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-
-
-button:hover{
-    background-color: crimson;
-}
-
-label {
-  line-height: 50px;
-  height: 100%;
-  font-size: 15px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-}
-
-
-
-
-.grid {
-    border: solid aliceblue;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px;
-    width: 70%;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 33% 33% 33%;
-    margin:  0 auto;
-    grid-template-columns: repeat(3, 1fr);
+body {
+  font-family: Arial;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.item {
-    padding 10px;
-}
-.item1{
-    grid-column: span 3;
-}
-.item3{
-    grid-column: span 2;
-}
-.item6{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.item7{
-    grid-column-start: 1;
-}
-.item8{
-    grid-column-start: 1;
-}
-.item9{
-    grid-column-start: 1;
-}
 .item10{
     grid-column-start: 2;
     grid-column-end: 3;
@@ -133,6 +61,116 @@ input[type='file'] {
     background-color: #ccc;
     color: black;
     border-radius: 4px;
+}
+
+h3{
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Cherry Swash', cursive;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: #34495e;
+  padding: 20px;
+  margin: 80px;
+}
+
+label {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.campos1 input[type=text]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 0px 10PX 0px 10px;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+.campos2 input[type=text]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 50px 10PX 0px 10px;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+.campos3 input[type=text]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 50px 10PX 0px 10px;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+.campos4 input[type=text]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 50px 10PX 0px 10px;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #23cba7;
+  color: white;
+  padding: 14px 20px;
+  margin: 30px 0 30px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #049372;
+}
+
+button{
+  width: 100%;
+  background-color: rosybrown;
+  color: black;
+  font-size: bold;
+  padding: 14px 20px;
+  margin: 10px 0 30px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button:hover{
+    background-color: crimson;
 }
 
 @media (max-width: 700px) {
