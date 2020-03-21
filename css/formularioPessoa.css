@@ -5,8 +5,8 @@ body {
 div.container {
   border-radius: 5px;
   background-color: #34495e;
-  padding: 20px;
-  margin: 80px;
+  padding: 50px;
+  margin: 10px;
 }
 
 input[type=text], select {

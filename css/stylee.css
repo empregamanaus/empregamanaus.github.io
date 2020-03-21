@@ -1,11 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 nav {
 	margin: 27px auto 0;
+	/*margin:auto;*/
+	
 	position: relative;
 	width: 720px;
 	height: 50px;
 	background-color: #34495e;
 	border-radius: 8px;
 	font-size: 0;
+	box-sizing: border-box;
 }
 nav a {
 	line-height: 50px;
