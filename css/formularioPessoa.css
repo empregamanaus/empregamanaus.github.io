@@ -2,6 +2,13 @@ body {
   font-family: Arial;
 }
 
+div.container {
+  border-radius: 5px;
+  background-color: #34495e;
+  padding: 20px;
+  margin: 80px;
+}
+
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -44,13 +51,6 @@ input[type=submit]:hover {
   border-radius: 4px;
   cursor: pointer;
   font-size: 20px;
-}
-
-div.container {
-  border-radius: 5px;
-  background-color: #34495e;
-  padding: 20px;
-  margin: 80px;
 }
 
 label {
