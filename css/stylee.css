@@ -1,18 +1,19 @@
-* {
-  box-sizing: border-box;
-}
-
+ * {
+ margin: 0;
+ padding: 0;
+ }
 nav {
 	margin: 27px auto 0;
 	/*margin:auto;*/
-	
+	/*width: 100%;
+    height: 50px;*/
 	position: relative;
 	width: 720px;
 	height: 50px;
 	background-color: #34495e;
 	border-radius: 8px;
 	font-size: 0;
-	box-sizing: border-box;
+	
 }
 nav a {
 	line-height: 50px;
@@ -157,6 +158,7 @@ span {
 
 nav .dropdown {
   display: inline-block;
+
 }
 
 
@@ -167,6 +169,7 @@ nav .dropdown .dropdown-content {
   border-radius: 8px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 nav .dropdown .dropdown-content a {
