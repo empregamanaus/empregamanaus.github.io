@@ -16,8 +16,6 @@ html {
   width: 33.3%;
   margin-bottom: 16px;
   padding: 0 8px;
-
-
 }
 
 @media screen and (max-width: 650px) {
@@ -31,7 +29,7 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container {
+.container {;
   padding: 0 16px;
   background-color: #34495e;
 }
@@ -72,91 +70,143 @@ h2{
   font-size: 30px;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  font-family: 'Cherry Swash', cursive;
+}
+p{
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.container2 {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container2:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 </style>
 </head>
 <body>
 
 <h2>Conheca A Equipe</h2>
-<p>Resize the browser window to see the effect.</p>
+<p>Para saber mais sobre os papéis de cada integrante clique ou passe o mouse Foto.</p>
 <br>
 
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="../imgs/Adir_.jpeg" alt="Adir" width="500" height="500">
+      <div class="container2">
+          <img src="../imgs/Adir_.jpeg" alt="Adir" width="500" height="500">
+        <div class="overlay">
+          <div class="text">Responsável pela elaboração da documentação referente aos resquisitos do Sistema.</div>
+        </div>
+      </div>      
       <div class="container">
         <h2>Adir Junior</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
+        <p>Contato: example@example.com</p>
+        </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="../imgs/Alan_.jpg" alt="Alan" width="500" height="500">
+      <div class="container2">
+          <img src="../imgs/Alan_.jpg" alt="Alan" width="500" height="500">
+        <div class="overlay">
+          <div class="text">Responsável em desenvolver códigos back - end feitos utilizando linguagem Java Script.</div>
+        </div>
+      </div>      
       <div class="container">
         <h2>Alan Spindler</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>Contato: example@example.com</p>
       </div>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
-      <img src="../imgs/Leandro_.jpeg" alt="Leandro" width="500" height="500">
+        <div class="container2">
+          <img src="../imgs/Leandro_.jpeg" alt="Leandro" width="500" height="500">
+        <div class="overlay">
+          <div class="text">Responsável pela elaboração da documentação referente aos requisitos do Sistema.</div>
+        </div>
+      </div>      
       <div class="container">
-        <h2>Leandro Souza</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Leandro Souza</h2>        
+        <p>Contato: example@example.com</p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="../imgs/Vitor_.jpeg" alt="John" width="500" height="500">
+        <div class="container2">
+          <img src="../imgs/Vitor_.jpeg" alt="John" width="500" height="500">
+        <div class="overlay">
+          <div class="text">Responsável pela elaboração da documentação referente aos resquisitos do Sistema.</div>
+        </div>
+      </div>      
       <div class="container">
         <h2>Vitor Rodrigues</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>Contato: example@example.com</p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="../imgs/Rodrigo_.jpeg" alt="John" width="500" height="500">
+        <div class="container2">
+          <img src="../imgs/Rodrigo_.jpeg" alt="John" width="500" height="500">
+        <div class="overlay">
+          <div class="text">Responsável em desenvolver o design das páginas e desenvolver códigos em Html e CSS.</div>
+        </div>
+      </div>      
       <div class="container">
         <h2>Rodrigo Mesquita</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>Contato: example@example.com</p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="../imgs/Adriano_.jpg" alt="John" width="500" height="500">
+        <div class="container2">
+          <img src="../imgs/Adriano_.jpg" alt="John" width="500" height="500">
+        <div class="overlay">
+          <div class="text">Responsável em desenvolver o design das páginas e desenvolver códigos em Html e CSS.</div>
+        </div>
+      </div>      
       <div class="container">
-        <h2>Rodrigo Mesquita</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Adriano de Sá</h2>
+        <p>Contato: example@example.com</p>
       </div>
     </div>
   </div>
