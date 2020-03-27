@@ -5,6 +5,8 @@
 <style>
 html {
   box-sizing: border-box;
+  background-color: #34495e;
+  padding: 50px;
 }
 
 *, *:before, *:after {
@@ -31,7 +33,9 @@ html {
 
 .container {;
   padding: 0 16px;
-  background-color: #34495e;
+  /*background: #c09f80;  /* fallback for old browsers */
+  background: #008CBA;
+ 
 }
 
 .container::after, .row::after {
@@ -64,10 +68,21 @@ img{
   width: 100%;  
 }
 
-h2{
+
+h3{
+
   margin: 40px 0 40px;
   text-align: center;
-  font-size: 30px;
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h2{
+
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size:30px;
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
@@ -99,6 +114,7 @@ p{
 .container2:hover .overlay {
   bottom: 0;
   height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .text {
@@ -116,8 +132,8 @@ p{
 </head>
 <body>
 
-<h2>Conheca A Equipe</h2>
-<p>Para saber mais sobre os papéis de cada integrante clique ou passe o mouse Foto.</p>
+<h3>Conheça a Equipe</h3>
+<p>Para saber mais sobre os papéis de cada integrante clique ou passe o mouse na Foto.</p>
 <br>
 
 <div class="row">
