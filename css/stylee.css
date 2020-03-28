@@ -3,7 +3,7 @@
 }
 
 nav {
-	margin: 27px auto 200px;
+	margin: 27px auto ;
 	/*margin:auto;*/
 	
 	position: relative;
@@ -13,6 +13,7 @@ nav {
 	border-radius: 8px;
 	font-size: 0;
 	box-sizing: border-box;
+    z-index: 1;
 }
 nav a {
 	line-height: 50px;
@@ -112,10 +113,18 @@ input[type=text], select {
   font-size: 18px;
 }
 
+html{
+    height: 100%;
+}
+
 body {
+    margin: 0px;
+    min-height: 100%;
 	font-size: 12px;
 	font-family: sans-serif;
 	background: #2c3e50;
+    display: flex;
+      flex-direction: column;
 }
 h1 {
 	text-align: center;
@@ -243,6 +252,69 @@ nav .dropdown:hover .dropdown-content {
   animation-duration: 1.5s;
 }
 
+#main{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.container {
+	margin: 50px auto;
+	display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+.container-item {
+	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+	flex: 1;
+	margin: 5px;
+    
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container-item p{
+    margin-top: 50px;
+}
+.container-item img{
+    max-width: 100%;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+footer{
+    font-size: 15px;
+    color: #a0a0a0;
+    background-color: #101010
+}
+footer div ul{
+}
+footer div ul li{
+    list-style: none;
+}
+footer div ul li a{
+    color: #a0a0a0;
+    text-decoration: none;
+}
+.horiz-list li{
+    font-size: 3em;
+    display: inline;
+}
+
+.page-content{
+    flex:1;
+}
+
+i{
+    margin-right: 10px;
+    
+  transition: 0.3s;
+}
+
+i:hover{
+    color: aqua;
+    text-shadow: 2px 2px RED;
+}
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -256,4 +328,10 @@ nav .dropdown:hover .dropdown-content {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+  .container{display: block}
+}
+
+@media only screen and (max-width: 700px){
+    .container{display: block}
+    .container-item img{max-width: 100%}
 }
