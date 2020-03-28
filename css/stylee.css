@@ -276,6 +276,7 @@ nav .dropdown:hover .dropdown-content {
 .container {
 	margin: 50px auto;
 	display: flex;
+  height: 150px;
     flex-direction: row;
     max-width: 100%;
 }
@@ -299,9 +300,12 @@ nav .dropdown:hover .dropdown-content {
 }
 
 footer{
+
+  height: 300px;
     font-size: 15px;
     color: #a0a0a0;
     background-color: #101010
+
 }
 footer div ul{
 }
