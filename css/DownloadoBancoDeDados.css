@@ -51,7 +51,7 @@ p.test{
 a {
   height: 100%;
   font-size: 15px; 
-  margin-left: 5px;
+  margin: 5px;
   position: relative;
   z-index: 1;
   text-decoration: none;
