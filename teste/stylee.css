@@ -15,36 +15,85 @@ html{
     flex-direction: column;
 }
 
-nav {
+/*.navbar {
 	margin: 27px auto ;
-	/*margin:auto;*/
-	/*width: 100%;
-    height: 50px;*/
-
 	position: relative;
-	width: 770px;
+	width: 650px;
 	height: 50px;
 	background-color: #34495e;
 	border-radius: 8px;
 	font-size: 0;
 	box-sizing: border-box;
-    z-index: 1;
+  z-index: 1;
 
+}*/
+
+.navbar {
+  max-width: 700px;
+  margin: 100px auto;
+  overflow: hidden;
+  background-color: #34495e;
+  border-radius: 8px;
+  font-size: 0;
+  box-sizing: border-box;
+  z-index: 1;
 }
-nav a {
+/*
+.navbar a {
 	line-height: 50px;
 	height: 100%;
 	font-size: 15px;
-	display: inline-block;
-	position: relative;
+  float: left;
 	z-index: 1;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
 	cursor: pointer;
+
+   float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-nav .animation {
+*/
+
+.navbar a {
+  
+  font-size: 15px;
+  float: left;  
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer; 
+  text-align: center;
+  padding: 14px 16px;
+}
+
+
+@media screen and (max-width: 470px) {
+  
+  .navbar a {
+    width: 100%;
+    float: left;
+    display: block;    
+    text-align: center;
+  }
+}
+/*
+@media screen and (max-width: 700px) {
+  .navbar a {
+    width: 100%;
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}*/
+
+.navbar .animation {
 	position: absolute;
 	height: 100%;
 	top: 0;
@@ -70,44 +119,35 @@ a:nth-child(5) {
 a:nth-child(6) {
 	width: 100px;
 }
-a:nth-child(7) {
-	width: 100px;
-}
-
-nav .start-home, a:nth-child(1):hover~.animation {
+.navbar .start-home, a:nth-child(1):hover~.animation {
 	width: 100px;
 	left: 0;
 	background-color: #1abc9c;
 }
-nav .start-about, a:nth-child(2):hover~.animation {
+.navbar .start-about, a:nth-child(2):hover~.animation {
 	width: 110px;
 	left: 100px;
 	background-color: #e74c3c;
 }
-nav .start-equipe, a:nth-child(3):hover~.animation {
+.navbar .start-blog, a:nth-child(3):hover~.animation {
 	width: 100px;
 	left: 210px;
 	background-color: #3498db;
 }
-nav .start-contatos, a:nth-child(4):hover~.animation {
+.navbar .start-contatos, a:nth-child(4):hover~.animation {
 	width: 150px;
 	left: 300px;
 	background-color: #9b59b6;
 }
-nav .start-cadastros, div:nth-child(5):hover~.animation {
+.navbar .start-cadastros, div:nth-child(5):hover~.animation {
 	width: 120px;
 	left: 440px;
 	background-color: #e67e22;
 }
-nav .start-vagas, div:nth-child(6):hover~.animation {
+.navbar .start-vagas, div:nth-child(6):hover~.animation {
 	width: 100px;
 	left: 550px;
 	background-color: #f1828d;
-}
-nav .start-entrar, a:nth-child(7):hover~.animation {
-	width: 140px;
-	left: 630px;
-	background-color: #528459;
 }
 input[type=submit] {
   width: 100%;
@@ -126,7 +166,7 @@ input[type=submit]:hover {
   background-color: #049372;
 }
 
-input[type=text]:not(.modal-input), select {
+input[type=text], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -176,14 +216,14 @@ span {
 }
 
 
-nav .dropdown {
+.navbar .dropdown {
   display: inline-block;
 
 }
 
 
 
-nav .dropdown .dropdown-content {
+.navbar .dropdown .dropdown-content {
   display: none;
   position: absolute;
   border-radius: 8px;
@@ -192,7 +232,7 @@ nav .dropdown .dropdown-content {
 
 }
 
-nav .dropdown .dropdown-content a {
+.navbar .dropdown .dropdown-content a {
   color: black;
   padding: 0px 0px 0px 20px;
   text-decoration: none;
@@ -205,18 +245,12 @@ nav .dropdown .dropdown-content a {
   color: white;
 }
 
-nav .dropdown .dropdown-content a:hover {background-color: #1e824c; min-width: 140px;}
-nav .dropdown:hover .dropdown-content {
+.navbar .dropdown .dropdown-content a:hover {background-color: #1e824c; min-width: 140px;}
+.navbar .dropdown:hover .dropdown-content {
   display: block;
 }
 
-@media screen and (max-width: 700px) {
-  nav a {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-}
+
 
 
 
@@ -282,7 +316,7 @@ nav .dropdown:hover .dropdown-content {
     margin: 0 auto;
 }
 
-.container:not(.modal-container) {
+.container {
 	margin: 50px auto;
 	display: flex;
   height: 150px;
@@ -339,151 +373,7 @@ i{
     
   transition: 0.3s;
 }
-/*Vagas*/
-.vagas-section{
-    width: 60%;
-    margin: auto;
-}
-.vagas{
-    background-color: aliceblue;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    margin-top: 20px;
-    box-shadow: 10px 10px 5px black;
-}
-.vagas p{
-    color: black;
-    text-align: left;
-    
-}
 
-.title-2{
-    max-width: 10%;
-    font-size: 30px;
-}
-.col{
-    float:left;
-}
-
-.col.u3{
-    width: 33.33%
-}
-
-.col.u1{
-    width: 100%;
-}
-
-.row{
-    width: 100%;
-    height: 100%;
-}
-
-.row:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-h2{
-   margin-bottom: 8px;
-}
-
-.description{
-    color: darkslategray;
-}
-
-.right-side{
-    float: right;
-}
-
-.simple-text{
-    font-size: 20px;
-    font-family: verdana;
-    color: black;
-}
- .default-btn{
-    font-size: 20px;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: white;
-}
-/*-Vagas-
-*/
-
-/* --Modal-- */
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-/* Modal */
 i:hover{
     color: aqua;
     text-shadow: 2px 2px RED;

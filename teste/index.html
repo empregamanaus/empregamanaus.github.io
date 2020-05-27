@@ -5,19 +5,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css\stylee.css">
-    
-    <link rel="stylesheet" type="text/css" href="css\modals.css">
 </head>
 <body>
 
 <h1>Emprega Manaus</h1>
 
-<nav>
+<div class="navbar">
   <a href="#">Home</a>
   <a href="#">About</a>
   <a href=".\paginas\Pag_Equipe.html" target="_blank">Equipe</a>
-  <a href=".\paginas\DownloadProjetoBancoDeDados.html" target="_blank">Download</a>
-
+  <a href="#" >Contatos</a>
       <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Cadastrar</a>
         <div style="background-color: #e67e22; " class="dropdown-content">
@@ -26,14 +23,13 @@
           <a href=".\paginas\formulario_Vagas.html" target="_blank">Vagas</a>
         </div>
       </div>
-          <div class="dropdown">
-            <a href=".\paginas\pesquisar_vagas.html" class="dropbtn"  target="_blank">Vagas</a>         
-          </div>
-        
-      <a  target="_blank" onclick="document.getElementById('id01').style.display='block'">Empregador</a>
-          <div class="animation start-home"></div>
 
-    </nav>
+          <div class="dropdown">
+            <a href=".\paginas\formulario_BuscarVagas.html" class="dropbtn"  target="_blank">Vagas</a>         
+          </div>
+          <div class="animation start-home"></div>
+</div>
+
     <div class="page-content">
     
     <div class="slideshow-container">
@@ -65,7 +61,7 @@
       <span class="dot"></span> 
     </div>
     
-
+   
     <footer>
         <div class="container">
             <div class="container">
@@ -98,40 +94,10 @@
                 </ul>
             </div>
         </div>
-        
         <p>
-            By <span>Sistema da Informação (IFN05S1)</span>
+            By <span>Sistema da Informação</span>
         </p>
-        
-        <!--Login Empregador-->
-        <div id="id01" class="modal">
-  
-          <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                
-                <img src="imgs/profile.png" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="modal-container">
-              <label for="uname"><b>Email</b></label>
-              <input class="modal-input" type="text" placeholder="Digite seu email" name="email" required>
-
-              <label for="psw"><b>Senha</b></label>
-              <input class="modal-input" type="password" placeholder="Digite sua senha" name="senha" required>
-
-              <button type="submit">Login</button>
-            </div>
-
-            <div class="modal-container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form>
-        </div>
     </footer>
-    
-    
     
     <script src="https://kit.fontawesome.com/a9aa97efbd.js" crossorigin="anonymous"></script>
     <script>
@@ -153,16 +119,6 @@
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
           setTimeout(showSlides, 5000); // Change image every 2 seconds
-        }
-        
-        //Modal ----
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
         }
 </script>
 </body>
