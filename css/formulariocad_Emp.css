@@ -96,12 +96,11 @@ label {
   text-align: center;
   color: white;
 }
-
-.campos1 input[type=text]{
-  width: 20%;
+input[type=text], select {
+  width: 100%;
   padding: 12px 20px;
-  margin: 0px 10PX 0px 10px;
-  display: inline;
+  margin: 8px 0;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -109,41 +108,6 @@ label {
   font-size: 18px;
 }
 
-.campos2 input[type=text]{
-  width: 20%;
-  padding: 12px 20px;
-  margin: 50px 10PX 0px 10px;
-  display: inline;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  opacity: 0.9;
-  font-size: 18px;
-}
-
-.campos3 input[type=text]{
-  width: 20%;
-  padding: 12px 20px;
-  margin: 50px 10PX 0px 10px;
-  display: inline;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  opacity: 0.9;
-  font-size: 18px;
-}
-
-.campos4 input[type=text]{
-  width: 20%;
-  padding: 12px 20px;
-  margin: 50px 10PX 0px 10px;
-  display: inline;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  opacity: 0.9;
-  font-size: 18px;
-}
 
 input[type=submit] {
   width: 100%;
