@@ -11,9 +11,9 @@
         <div class="container">
           <h3>Cadastro Empregador</h2>
             <div>
-                 <form action="#">
+                 <form name"frmEmpregador" method="post" action="#" onSubmit="return validaForm(this);">
                         <label for="nome">Nome Empresa:</label>
-                        <input type="text" name="nome"/>
+                        <input type="text" name="nome" id="nome"/>
                      
                         <label for="cnpj">CNPJ:</label>
                         <input type="text" name="cnpj"/> 
@@ -21,11 +21,8 @@
                         <label for="endereco">Endereço:</label>
                         <input type="text" name="endereco"/>  
                      
-                        <label for="telefone1">Celular:</label>
+                        <label for="telefone1">Telefone:</label>
                         <input type="text" name="telefone1"/>      
-                     
-                        <label for="telefone2">Telefone:</label>
-                        <input type="text" name="telefone2"/>         
                      
                         <label for="razaosocial">Razão Social:</label>
                         <input type="text" name="razaosocial"/>
@@ -40,15 +37,13 @@
                         <input type="text" name="ramoatividade"/>
                      
                         <label for="email">Email</label>
-                        <input type="text" name="email"/>
+                        <input type="text" name="email" id="email"/>
                      
                         <label for="senha">Senha</label>
                         <input type="text" name="senha"/>    
                      
                         <label for="senha2">Repita sua senha</label>
                         <input type="text" name="senha2"/>
-                        <label for="myFile" id="logoUploadLabel">Nos Envie sua Logo</label>
-                        <input type="file" id="myFile" name="logoUpload">  
 
                     <input type="submit" value="CADASTRAR"/>
                     <input type="button" name="btn-sair" value="Sair" onclick="javascript:window.close()">
@@ -56,11 +51,33 @@
                          <!--
                     <div class="item10">
                         <img src="..\imgs\sua-logo-aqui.png">   
+
+                        ../php/insertLogin.php
                     </div> -->                 
                 </form>
             </div>
         </div>
         
-        <script src="js/stepbarProgress.js"></script>
+        <script type="text/javascript">
+            function validaForm(frm) {
+                var nome = document.getElementById("nome");
+                var email = document.getElementById("email");
+                
+                if(nome.value == "" || frm.nome.value == null || frm.nome.value.lenght < 3) {
+                    alert("Por favor, indique o seu nome.");
+                    nome.focus();
+                    return false;
+                }
+                if(email.value.indexOf("@") == -1 ||
+                  email.valueOf.indexOf(".") == -1 ||
+                  email.value == "" ||
+                  email.value == null) {
+                    alert("Por favor, indique um e-mail válido.");
+                    email.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </body>
 </html>
