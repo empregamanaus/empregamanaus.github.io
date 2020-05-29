@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emprega Manaus</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="..\css\stylee.css">
+    <link rel="stylesheet" type="text/css" href="..\css\sidebar_candidato.css">
+</head>
+<body>
+    
+    <h1>Bem vindo </h1>
+
+    
+    <div class="page-content">
+    <section>
+    
+    </section>
+    </div>
+    
+    <nav>
+      <a href="..\index.html">Home</a>
+      <a href="#">About</a>
+      <a href="..\paginas\Pag_Equipe.html" target="_blank">Equipe</a>
+      <a href="#" >Contatos</a>
+
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Cadastrar</a>
+        <div style="background-color: #e67e22; " class="dropdown-content">
+          <a href="..\paginas\fomulario_CadastroPessoa.html" target="_blank">Currículo</a>
+          <a href="..\paginas\formulario_Empregador.html" target="_blank">Empresa</a>
+          <a href="..\paginas\formulario_Vagas.html" target="_blank">Vagas</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="..\paginas\pesquisar_vagas.html" class="dropbtn"  target="_blank">Vagas</a>         
+      </div>
+        <a  target="_blank" onclick="document.getElementById('id01').style.display='block'">Empregador</a>
+      <div class="animation start-home"></div>
+    </nav>
+    
+    <section class="vagas-section">
+        <span class="title-2 left-side">Pesquisar Vagas</span>
+        <div class="row">
+            <form>
+                <div class="col u3"><input type="text" placeholder="Palavra chave"></div>
+                <div class="col u3">
+                    <select id="secao" name="secao">
+                      <option value="nome">nome</option>
+                      <option value="descricao">descricao</option>
+                      <option value="bairro">bairro</option>
+                    </select>
+                </div><button class="right-side default-btn">Pesquisar</button>
+            </form>
+        </div>
+        
+        <span class="title-2 left-side">Resultados</span>
+        <div class="vagas" id="myBtn">
+            <div class="row">
+                <div class="col u3"><h2 class="vagas-title">Nome</h2><span class="description">default</span></div>
+                <div class="col u3"><h2>Oferta</h2><span class="description">default</span></div>
+                <div  class="col u3"><h2>Bairro</h2><span class="description">default</span></div>
+            </div>
+            
+            <div class="row">
+                <div class="col u1">
+                    <h2>Descricao</h2><span class="description">default</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </section>
+    
+        <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col u3"><h2>Oferta</h2><span class="description">default</span></div>
+                <div  class="col u3"><h2>Bairro</h2><span class="description">default</span></div>
+              </div>
+            
+            <div class="row">
+                <div class="col u1">
+                    <h2>Descricao</h2><span class="description">default</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col u1">
+                    <h2>Contato:</h2><span class="description">default</span>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <button class="right-side default-btn">Excluir Vaga</button>
+                    <button class="right-side default-btn">Editar Vaga</button>
+                </div>
+            </div>
+          </div>
+
+        </div>
+    
+    <script src="https://kit.fontawesome.com/a9aa97efbd.js" crossorigin="anonymous"></script>
+    <script>
+        
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        //dropdown
+        
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+        
+        //Modal
+        
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+</script>
+</body>
+</html>

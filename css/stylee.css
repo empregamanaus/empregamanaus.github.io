@@ -22,7 +22,7 @@ nav {
     height: 50px;*/
 
 	position: relative;
-	width: 650px;
+	width: 770px;
 	height: 50px;
 	background-color: #34495e;
 	border-radius: 8px;
@@ -70,6 +70,10 @@ a:nth-child(5) {
 a:nth-child(6) {
 	width: 100px;
 }
+a:nth-child(7) {
+	width: 100px;
+}
+
 nav .start-home, a:nth-child(1):hover~.animation {
 	width: 100px;
 	left: 0;
@@ -100,6 +104,11 @@ nav .start-vagas, div:nth-child(6):hover~.animation {
 	left: 550px;
 	background-color: #f1828d;
 }
+nav .start-entrar, a:nth-child(7):hover~.animation {
+	width: 140px;
+	left: 630px;
+	background-color: #528459;
+}
 input[type=submit] {
   width: 100%;
   background-color: #23cba7;
@@ -117,7 +126,7 @@ input[type=submit]:hover {
   background-color: #049372;
 }
 
-input[type=text], select {
+input[type=text]:not(.modal-input), select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -273,7 +282,7 @@ nav .dropdown:hover .dropdown-content {
     margin: 0 auto;
 }
 
-.container {
+.container:not(.modal-container) {
 	margin: 50px auto;
 	display: flex;
   height: 150px;
@@ -330,7 +339,151 @@ i{
     
   transition: 0.3s;
 }
+/*Vagas*/
+.vagas-section{
+    width: 60%;
+    margin: auto;
+}
+.vagas{
+    background-color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px black;
+}
+.vagas p{
+    color: black;
+    text-align: left;
+    
+}
 
+.title-2{
+    max-width: 10%;
+    font-size: 30px;
+}
+.col{
+    float:left;
+}
+
+.col.u3{
+    width: 33.33%
+}
+
+.col.u1{
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+    height: 100%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2{
+   margin-bottom: 8px;
+}
+
+.description{
+    color: darkslategray;
+}
+
+.right-side{
+    float: right;
+}
+
+.simple-text{
+    font-size: 20px;
+    font-family: verdana;
+    color: black;
+}
+ .default-btn{
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+/*-Vagas-
+*/
+
+/* --Modal-- */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal */
 i:hover{
     color: aqua;
     text-shadow: 2px 2px RED;
