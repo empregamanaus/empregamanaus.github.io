@@ -4,16 +4,18 @@ USE empregos;
 create table empresa(
 	idEmpresa int AUTO_INCREMENT,
 	cnpj varchar(12) not null unique key,
-	nomeEmpresa varchar(50) not null unique key,
+	nomeEmpresa varchar(50) not null,
     endereco varchar(30) not null,
     dataAbertura date,
-    razaoSocial varchar(60) unique key,
+    razaoSocial varchar(60),
     ramoAtividade varchar(60),
     situacaoFuncionamento varchar(60),
-    email varchar(40),
     celular varchar(12),
+    emailUsuario varchar(100)
     PRIMARY KEY (idEmpresa)
 );
+
+#falta colocar emailUsuario no formulário,
 
 create table vaga(
 	codigo bigint unsigned zerofill not null,
@@ -30,13 +32,9 @@ create table vaga(
 );
 
 CREATE TABLE usuario (
-  idUser int(11) NOT NULL,
-  login varchar(100) NOT NULL,
-  email varchar(100) NOT NULL,
-  senha varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-ALTER TABLE usuario
-  ADD PRIMARY KEY (login),
-  ADD UNIQUE KEY email (email),
-  ADD UNIQUE KEY senha (senha),
-  ADD UNIQUE KEY idUser (idUser);
+  login varchar(100) NOT NULL unique key,
+  email varchar(100) NOT NULL unique key,
+  senha varchar(100) NOT NULL unique key,
+  primary key (email)
+);
+#O usuário vai precisar entrar ou com email ou com senha
