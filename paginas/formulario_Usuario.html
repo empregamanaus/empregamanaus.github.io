@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cadastro de Usuario</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="..\css\formularioPessoa.css">
+</head>
+<body>
+    
+    <div class="container">
+      <h3>Cadastrar Currículo</h3>
+        <div class="breadcrumb"><a href="../index.html">Menu</a> > <a href="formulario_Usuario.html">Criar Conta</a></div>
+      <p>Preencha corretamente suas Informações</p>
+      
+      <form name"frmUsuario" method="post" action="../php/login/insertLogin.php" onSubmit="return validaForm(this);">
+        <label for="fname">nome:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Nome completo...">
+
+        
+        <label for="fname">login:</label>
+        <input type="text" id="fname" name="login" placeholder="login">
+          
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" placeholder="Seu E-mail...">
+        
+
+        <label for="senha"> Senha</label>
+        <input type="text" name="senha"/>    
+
+        <label for="senha2">Repita sua senha</label>
+        <input type="text" name="senha2"/>
+       
+      
+        <input type="submit" value="Enviar">
+        <input type="button" name="btn-sair" value="Sair" onclick="javascript:window.close()">
+      </form>
+    </div>
+    
+    <script type="text/javascript">
+            function validaForm(frm) {
+                var nome = document.getElementById("nome");
+                var email = document.getElementById("email");
+                
+                if(frm.login.value == "" || frm.login.value == null || frm.login.value.lenght < 3) {
+                    alert("Por favor, indique o seu login.");
+                    frm.login.focus();
+                    return false;
+                }
+                
+                if(nome.value == "" || frm.nome.value == null || frm.nome.value.lenght < 3) {
+                    alert("Por favor, indique o seu nome.");
+                    nome.focus();
+                    return false;
+                }
+                if(email.value.indexOf("@") == -1 ||
+                  email.valueOf.indexOf(".") == -1 ||
+                  email.value == "" ||
+                  email.value == null) {
+                    alert("Por favor, indique um e-mail válido.");
+                    email.focus();
+                    return false;
+                }
+                
+                if(frm.senha.value == frm.senha2.value) {
+                    alert("As senhas tem que ser iguais.");
+                    frm.senha.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+</body>
+</html>
