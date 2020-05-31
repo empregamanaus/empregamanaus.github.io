@@ -11,7 +11,7 @@
         <div class="container">
           <h3>Cadastrar Empresa</h2>
             <div>
-                 <form name"frmEmpregador" method="post" action="#" onSubmit="return validaForm(this);">
+                 <form name"frmEmpregador" method="post" action="../php/empresa/insertEmpresa.php" onSubmit="return validaForm(this);">
                         <label for="nome">Nome Empresa:</label>
                         <input type="text" name="nome" id="nome"/>
                      
@@ -75,6 +75,11 @@
                   email.value == null) {
                     alert("Por favor, indique um e-mail válido.");
                     email.focus();
+                    return false;
+                }
+                if(frm.senha.value == frm.senha2.value) {
+                    alert("As senhas tem que ser iguais.");
+                    frm.senha.focus();
                     return false;
                 }
                 return true;

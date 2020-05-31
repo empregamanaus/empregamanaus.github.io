@@ -30,11 +30,12 @@
             <a href=".\paginas\pesquisar_vagas.html" class="dropbtn"  target="_blank">Vagas</a>         
           </div>
         
-      <a  target="_blank" onclick="document.getElementById('id01').style.display='block'">Empregador</a>
+      <a  target="_blank" onclick="document.getElementById('id01').style.display='block'">Entrar</a>
           <div class="animation start-home"></div>
+    <!--Entrar antes do usuário fazer login, Usuário depois do login, fazer um dropdown com: empresas, vagas, alterar conta,sair-->
 
     </nav>
-    <div class="page-content">
+    <div class="page-content"></div>
     
     <div class="slideshow-container">
 
@@ -103,7 +104,7 @@
             By <span>Sistema da Informação (IFN05S1)</span>
         </p>
         
-        <!--Login Empregador-->
+        <!--Login Empregador (usuário agora por causa do adriano)-->
         <div id="id01" class="modal">
   
           <form class="modal-content animate" action="/action_page.php" method="post">
@@ -111,8 +112,9 @@
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 
                 <img src="imgs/profile.png" alt="Avatar" class="avatar">
+                
             </div>
-
+              <span class="psw"><a href="paginas/formulario_Usuario.html" target="_blank" style="color: aliceblue">Criar conta</a></span>
             <div class="modal-container">
               <label for="uname"><b>Email</b></label>
               <input class="modal-input" type="text" placeholder="Digite seu email" name="email" required>
@@ -123,9 +125,10 @@
               <button type="submit">Login</button>
             </div>
 
-            <div class="modal-container" style="background-color:#f1f1f1">
+            <div class="modal-container">
               <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
+              <span class="psw">Esqueceu a <a href="#">senha?</a></span>
+                
             </div>
           </form>
         </div>
