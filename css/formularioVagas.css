@@ -1,4 +1,4 @@
-<style>
+
 body {
   font-family: Arial;
 }
@@ -143,4 +143,12 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 }
-</style>
+
+.breadcrumb{
+    color: aliceblue;
+    
+}
+.breadcrumb a{
+    color: #babaff;
+    text-decoration: none;
+}

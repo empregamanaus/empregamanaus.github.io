@@ -385,6 +385,7 @@ i{
     clear: both;
 }
 
+
 h2{
    margin-bottom: 8px;
 }
@@ -405,7 +406,6 @@ h2{
  .default-btn{
     font-size: 20px;
     padding: 10px;
-    margin-top: 10px;
     border-radius: 10px;
     background-color: white;
 }
@@ -507,4 +507,13 @@ i:hover{
 @media only screen and (max-width: 700px){
     .container{display: block}
     .container-item img{max-width: 100%}
+}
+
+.breadcrumb{
+    color: aliceblue;
+    
+}
+.breadcrumb a{
+    color: #babaff;
+    text-decoration: none;
 }

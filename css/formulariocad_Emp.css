@@ -147,3 +147,12 @@ input[type=button]:hover{
         display: block;
     }
 }
+
+.breadcrumb{
+    color: aliceblue;
+    
+}
+.breadcrumb a{
+    color: #babaff;
+    text-decoration: none;
+}
