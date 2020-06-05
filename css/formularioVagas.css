@@ -87,13 +87,14 @@ input[type=file] {
   font-size: 15px;
 }
 
-input[type=button]{
+input[type=button]:not(.btn-excluir){
   width: 100%;
   background: #FF416C;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   padding: 14px 20px;
+    margin: 0px 0px 5px 0px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -132,6 +133,19 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
+}
+
+.btn-excluir {
+  width: 100%;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #000000, #111111);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #000000, #111111); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 

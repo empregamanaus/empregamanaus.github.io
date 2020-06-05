@@ -21,13 +21,11 @@
       <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Cadastrar</a>
         <div style="background-color: #e67e22; " class="dropdown-content">
-          <a href=".\paginas\fomulario_CadastroPessoa.html" target="_blank">Currículo</a>
-          <a href=".\paginas\formulario_Empregador.html" target="_blank">Empresa</a>
-          <a href=".\paginas\formulario_Vagas.html" target="_blank">Vagas</a>
+          <a href="paginas/formulario_Usuario.html" target="_blank">Usuario</a>
         </div>
       </div>
           <div class="dropdown">
-            <a href=".\paginas\pesquisar_vagas.html" class="dropbtn"  target="_blank">Vagas</a>         
+            <a href=".\paginas\pesquisar_vagas.php" class="dropbtn"  target="_blank">Vagas</a>         
           </div>
         
       <a  target="_blank" onclick="document.getElementById('id01').style.display='block'">Entrar</a>
@@ -107,7 +105,7 @@
         <!--Login Empregador (usuário agora por causa do adriano)-->
         <div id="id01" class="modal">
   
-          <form class="modal-content animate" action="/action_page.php" method="post">
+          <form class="modal-content animate" method="post" action="validar_acesso.php">
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 
