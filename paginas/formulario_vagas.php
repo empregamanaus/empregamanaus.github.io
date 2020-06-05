@@ -5,13 +5,16 @@
 <link rel="stylesheet" type="text/css" href="..\css\formularioVagas.css">
 </head>
 <body>
-
+    <?php   
+        $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $nome = $_GET['nome'];
+    ?>
 <div class="container">
   <!--<form action="/action_page.php">-->
     <h3>Cadastrar Vaga</h3>
     <p>Dados da Oferta</p>
 
-  <form action="#">   
+  <form method="post" action="<?php echo "../php/vaga/registrar_vagas.php?id=$id&nome=$nome" ?>">   
       
        <label for="fAnuncio">Nome do Anúncio:</label>
        <input type="text" id="fanuncio" name="anuncio" placeholder="Nome do Anuncio...">   
@@ -21,8 +24,6 @@
             <option value="treinee">Treinee</option>
             <option value="emprego">Emprego</option>
           </select>    
-        <label for="fnrVagas">Nr de Vagas</label>
-        <input type="text" id="fnrVagas" name="fnrVagas" placeholder="Número de Vagas...">    
         <label for="bairro">Bairro</label>      
         <select id="bairro" name="bairro">
           <option value="Coroado">Bairro</option>
@@ -36,8 +37,8 @@
         </select>     
         <label for="descricao">Descrição</label>      
         <textarea id="descricao" name="descricao" placeholder="Descrição da vaga..." style="height:200px"></textarea>
-        <label for="myFile" id="imgVaga">Anexar imagem da vaga:</label>
-          <input type="file" id="myFile" name="imgVaga">  
+        <label for="email">Email de contato</label>      
+        <input type="text" id="email" name="emailcontato" placeholder="email para o candidato fazer contato.">   
    
     <div class="row">
       <input type="submit" value="Enviar">

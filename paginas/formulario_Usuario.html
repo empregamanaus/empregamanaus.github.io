@@ -13,14 +13,10 @@
         <div class="breadcrumb"><a href="../index.html">Menu</a> > <a href="formulario_Usuario.html">Criar Conta</a></div>
       <p>Preencha corretamente suas Informações</p>
       
-      <form name"frmUsuario" method="post" action="../php/login/insertLogin.php" onSubmit="return validaForm(this);">
+      <form name"frmUsuario" method="post" action="../php/usuario/registra_usuario.php" onSubmit="return validaForm(this);">
         <label for="fname">nome:</label>
-        <input type="text" id="fname" name="firstname" placeholder="Nome completo...">
+        <input type="text" id="nome" name="nome" placeholder="Nome completo...">
 
-        
-        <label for="fname">login:</label>
-        <input type="text" id="fname" name="login" placeholder="login">
-          
         <label for="email">E-mail:</label>
         <input type="text" id="email" name="email" placeholder="Seu E-mail...">
         
@@ -42,12 +38,6 @@
                 var nome = document.getElementById("nome");
                 var email = document.getElementById("email");
                 
-                if(frm.login.value == "" || frm.login.value == null || frm.login.value.lenght < 3) {
-                    alert("Por favor, indique o seu login.");
-                    frm.login.focus();
-                    return false;
-                }
-                
                 if(nome.value == "" || frm.nome.value == null || frm.nome.value.lenght < 3) {
                     alert("Por favor, indique o seu nome.");
                     nome.focus();
@@ -62,7 +52,7 @@
                     return false;
                 }
                 
-                if(frm.senha.value == frm.senha2.value) {
+                if(frm.senha.value != frm.senha2.value) {
                     alert("As senhas tem que ser iguais.");
                     frm.senha.focus();
                     return false;

@@ -9,6 +9,22 @@
 </head>
 <body>
     
+    <?php
+
+        require_once('../php/conexaoBanco/db.class.php');
+        include_once("../php/conexaoBanco/conexao.php");
+        
+        session_start();
+        if (!isset($_SESSION['email'])){
+            $_SESSION['msg'] = "<p style='color:red;'>Você tem que estar logado para realizar isso</p>";
+    header("Location: ../index.html");
+        }
+    
+        $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $nome = $_GET['nome'];
+        
+    ?>
+    
     <h1>Bem vindo </h1>
 
     
@@ -27,36 +43,70 @@
       <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Cadastrar</a>
         <div style="background-color: #e67e22; " class="dropdown-content">
-          <a href="..\paginas\fomulario_CadastroPessoa.html" target="_blank">Currículo</a>
-          <a href="..\paginas\formulario_Empregador.html" target="_blank">Empresa</a>
-          <a href="..\paginas\formulario_Vagas.html" target="_blank">Vagas</a>
+          <a href="<?php echo "formulario_vagas.php?id=$id&nome=$nome";?>" target="_blank">Vaga</a>
+          
         </div>
       </div>
 
       <div class="dropdown">
-        <a href=".\paginas\pesquisar_vagas.html" class="dropbtn"  target="_blank">Vagas</a>       
+        <a href="pesquisar_vagas.html" class="dropbtn"  target="_blank">Vagas</a>       
       </div>
         <div class="dropdown">
-            <a  target="_blank" class="dropbtn" onclick="document.getElementById('id01').style.display='block'">Empregador</a>
+            <a  target="_blank" class="dropbtn" onclick="document.getElementById('id01').style.display='block'">Usuario</a>
             <div style="background-color: #e67e22; " class="dropdown-content">
-              <a href="..\paginas\fomulario_Empregador.html" target="_blank">Empresas</a>
-              <a href="..\paginas\formulario_alterar_Usuario.html" target="_blank">Conta</a>
-              <a href="..\paginas\formulario_Vagas.html" target="_blank">Sair</a> <!--PHP para terminar a sessão-->
+              <a href="usuario_empresas.php" target="_blank">Empresas</a>
+              <a href="fomulario_alterar_usuario.php" target="_blank">Conta</a>
+              <a href="..\php\usuario\terminar_sessao.php" target="_blank">Sair</a> <!--PHP para terminar a sessão-->
             </div>
         </div>
-        
       <div class="animation start-home"></div>
     </nav>
     
     <section class="vagas-section">
-        <div class="breadcrumb"><a href="../index.html">Menu</a> > <a href="usuario_empresas.html">Empresas</a></div>
-        <span class="title-2 left-side">Suas Empresas</span>
+        <div class="breadcrumb"><a href="../index.html">Menu</a> > <a href="usuario_empresas.php">Empresas</a> > <a href="empresa.php?id=<?php echo $id; ?>&nome=<?php echo $nome; ?>">Empresa <?php echo $nome;?></a></div>
+        <span class="title-2 left-side">Vagas da Empresa <?php echo $nome; ?></span>
         
-        <a href="formulario_Empregador.html"><button  class="right-side default-btn">Cadastrar empresa</button></a>
+        <a href="<?php echo "formulario_alterar_empresa.php?id=$id";?>"><button class="right-side default-btn">Alterar/Excluir Empresa</button></a>
+        <a href="<?php echo "formulario_vagas.php?id=$id&nome=$nome";?>"><button class="right-side default-btn">Criar Vaga</button></a>
         
+        <?php
+        $objDb = new db();
+        $link = $objDb->conecta_mysql();
+
+        if($id){
+          $result_vagas = "SELECT * FROM vaga WHERE idEmpresa = '$id'";
+          $resultado_vagas = mysqli_query($conn, $result_vagas);
+          if($resultado_vagas){
+              
+          while($row_vagas = mysqli_fetch_assoc($resultado_vagas)){
+
+            //echo "<a href='apagar_vagas.php?id=" . $row_vagas['idEmpresa'] . "'>Apagar</a><br><hr>";
+          //--------
+                  $codigo = $row_vagas['codigo'];
+                  echo "<div class='vagas' id='myBtn'>";
+                  echo "<div class='row'>";
+                  echo "<div class='col u3'><h2 class='vagas-title'>Nome</h2><span class='description'>". $row_vagas['nomeAnuncio']."</span></div>";
+                  echo "<div class='col u3'><h2>Oferta</h2><span class='description'>". $row_vagas['tipoOferta']."</span></div>";
+                  echo "<div class='col u3'><h2>Bairro</h2><span class='description'>". $row_vagas['bairro']."</span></div>";
+                  echo "</div>";
+                  echo "<div class='row'>";
+                  echo "<div class='col u1'>";      
+                  echo "<h2>Descricao</h2><span class='description' style='word-wrap: break-word'>". $row_vagas['descricao']."</span>";
+                  echo "</div>";
+                  echo "<hr><a class='right-side' href='formulario_editar_vaga.php?id=$id&codigo=$codigo&nome=$nome' target='_blank'>Alterar/Apagar</a><br><hr>"; //falta criar essa página :/
+                  echo "</div>";
+                  echo "</div>";
+                      
+              }
+          }
+        }
+        ?>
+        <!--
         <div class="vagas" id="myBtn">
             <div class="row">
-                <div class="col u2"><h2 class="vagas-title">Nome</h2><span class="description">default</span></div>
+                <div class="col u3"><h2 class="vagas-title">Nome</h2><span class="description">default</span></div>
+                <div class="col u3"><h2>Oferta</h2><span class="description">default</span></div>
+                <div  class="col u3"><h2>Bairro</h2><span class="description">default</span></div>
             </div>
             
             <div class="row">
@@ -65,14 +115,14 @@
                 </div>
             </div>
         </div>
-        
+        -->
         
         
     </section>
     
+  <!-- Modal content tirei pq ia dar trabalho
         <div id="myModal" class="modal">
 
-  <!-- Modal content -->
           <div class="modal-content">
             <div class="modal-header">
               <span class="close">&times;</span>
@@ -102,8 +152,8 @@
                 </div>
             </div>
           </div>
-
         </div>
+-->
     
     <script src="https://kit.fontawesome.com/a9aa97efbd.js" crossorigin="anonymous"></script>
     <script>
@@ -134,7 +184,7 @@
         }
         
         //Modal
-        
+        /*
         var modal = document.getElementById("myModal");
 
         // Get the button that opens the modal
@@ -159,6 +209,7 @@
             modal.style.display = "none";
           }
         }
+        */
 </script>
 </body>
 </html>
